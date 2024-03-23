@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.progress-container {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    left: 62%;
+    transform: translateX(-50%);
+    width: 250px; /* Adjusted width */
+    padding: 5px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #193c72, #033580);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0.65;
+    animation: pulse-animation 1.5s ease-in-out infinite;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.6), 0 0 12px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.8);
+    border: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+  
+
+#progress-label {
+    font-size: 1.3vh;
+    line-height: 4vh;
+    position: relative;
+    color: #ffffff;
+    z-index: 10;
+    font-weight: bold;
+}
+
+#progress-percentage {
+    font-size: 1.3vh;
+    line-height: 4vh;
+    position: absolute;
+    right: 10px; /* Adjusted to move the percentage counter to the right */
+    top: 45%; /* Adjust as needed */
+    transform: translateY(-50%); /* Center vertically */
+    color: #ffffff;
+    z-index: 10;
+    font-weight: bold;
+}
+
+  
+
+.progress-bar-container {
+  background: #fff;
+  height: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 10px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 255, 0.6);
+}
+
+#progress-bar {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to left, rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0.6));
+  border-radius: 20px;
+  position: relative;
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.6), 0 0 10px rgba(0, 0, 255, 0.6);
+  }
+
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 0, 255, 0.6);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.6), 0 0 10px rgba(0, 0, 255, 0.6);
+  }
+}
